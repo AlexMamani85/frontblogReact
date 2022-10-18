@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom/client';
 import { Global } from "@emotion/react/macro";
 import { globalStyles } from "./globalStyles";
 import App from "./App";
-
+import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Global styles={globalStyles} />
+    <BrowserRouter>
+      <Global styles={globalStyles} />
     <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
