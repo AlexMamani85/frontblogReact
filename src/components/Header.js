@@ -6,7 +6,7 @@ export default function Header() {
       <>
 <ListaSinOrden>
   <ListItem>
-    <Link to="/inicio">
+    <Link to="/">
         <TextSinDecoration>Inicio</TextSinDecoration>    
     </Link>
   </ListItem>
@@ -21,7 +21,7 @@ export default function Header() {
     </Link>
   </ListItem>
   <ListItem>
-    <Link to="About">
+    <Link to="/about">
         <TextSinDecoration>Acerca de Nosotros</TextSinDecoration>
     </Link>
   </ListItem>
