@@ -53,4 +53,5 @@ const H1 = styled.h1`
 
 const Paragraph = styled.p`
   padding: 16px;
+  text-align: justify;
 `;
