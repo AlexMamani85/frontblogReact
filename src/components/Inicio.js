@@ -2,12 +2,13 @@
 import React from 'react'
 import styled from "@emotion/styled";
 
-
+import Header from '../components/Header'
 
 export default function Indice() {
 
   return (
       <>
+      <Header></Header>
       <Wrapper>
         <H1>
         MÁS DE 200 SITIOS WEB Y BLOGS
@@ -25,13 +26,11 @@ export default function Indice() {
           * Siempre recuerde leer y seguir las pautas de envío, y por supuesto no hay garantías de que ninguno de los sitios que se enumeran a continuación acepte su contribución al contenido, sin importar cuán alta sea la calidad de su publicación de invitado.
         </Paragraph>
         </Wrapper>
-
       </>
   );
 }
 
 const Wrapper = styled.div`
-  border: red 1px solid;
   margin:16px;
   padding: 16px;
 
@@ -43,7 +42,6 @@ const Wrapper = styled.div`
 
   height:80%;
   width:80%;
-
 `;
 
 

@@ -1,13 +1,12 @@
 // import styled from "@emotion/styled";
 import React from 'react'
 import styled from "@emotion/styled";
-
-
-
+import Header from '../components/Header'
 export default function About() {
 
   return (
       <>
+        <Header></Header>
         <Wrapper>
           <H1>
             SOBRE NOSOTROS
@@ -22,7 +21,6 @@ export default function About() {
             Divulgación: Nuestro sitio es compatible con el lector. Cuando compra un servicio o un producto a través de nuestros enlaces, a veces ganamos una comisión de afiliado.
           </Paragraph>
         </Wrapper>
-
       </>
   );
 }

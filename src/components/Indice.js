@@ -3,7 +3,7 @@ import React from 'react'
 import styled from "@emotion/styled";
 import * as blogService from '../context/blogs-services'
 
-
+import Header from '../components/Header'
 
 export default function Indice() {
   const [blogs, setBlogs] = React.useState([])
@@ -16,21 +16,23 @@ export default function Indice() {
       .catch(console.log)
   },[])
 
-
   return (
-      <Table>
-        <TableRowTitle>
-          <TableHeader>Título</TableHeader>
-          <TableHeader>Contenido</TableHeader>
-        </TableRowTitle>
-        {blogs.map(x=>
-        (
-          <TableRow>
-            <TableData>{x.title}</TableData>
-            <TableData>{x.body}</TableData>
-          </TableRow>
-          ))}
-      </Table>
+      <>
+        <Header></Header>
+        <Table>
+          <TableRowTitle>
+            <TableHeader>Título</TableHeader>
+            <TableHeader>Contenido</TableHeader>
+          </TableRowTitle>
+          {blogs.map(x=>
+          (
+            <TableRow>
+              <TableData>{x.title}</TableData>
+              <TableData>{x.body}</TableData>
+            </TableRow>
+            ))}
+        </Table>
+      </>
   )
 }
 

@@ -3,6 +3,7 @@ import React from 'react';
 import styled from "@emotion/styled";
 import * as blogService from '../context/blogs-services';
 
+import Header from '../components/Header'
 
 
 export default function Busqueda() {
@@ -34,7 +35,8 @@ export default function Busqueda() {
   }
 
   return (
-        <>
+        <>        
+        <Header></Header>
           <Form>
             <FormWrapper>
               <TableInput>
@@ -73,9 +75,6 @@ export default function Busqueda() {
   )
 }
 
-
-
-
 const FormWrapper = styled.div`
   border-radius: 8px;
   background-color:lightblue;
@@ -90,9 +89,7 @@ const Form = styled.form`
   left: 0;
   right: 0;
   margin: 0 auto;
-
 `;
-
 
 const TableInput = styled.table`
   width: 100%;
@@ -108,22 +105,16 @@ const TableInput = styled.table`
   border: none;
 `;
 
-
 const TableDataForLabelInput = styled.td`
 `;
 const TableDataForInput = styled.td`
 `;
-
-
 
 const Label = styled.label`
   color:darkorange;
   filter:drop-shadow(1px 1px 5px #D2B288);
 
 `;
-
-
-
 
 const Input = styled.input`
   border: blue 1px solid;
@@ -136,9 +127,7 @@ const Input = styled.input`
   color: lightgray;
   font-style: italic;
 }
-  
 `;
-
 
 const Table = styled.table`
   padding: 32px;
