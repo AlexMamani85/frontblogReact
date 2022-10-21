@@ -4,7 +4,10 @@ import { Route, Routes } from 'react-router-dom';
 // <Inicio></Inicio>
 import Inicio from './components/Inicio'
 import Indice from './components/Indice'
-import Busqueda from './components/Busqueda'
+import BusquedaFront from './components/BusquedaFront'
+import BusquedaBack from './components/BusquedaBack'
+import Create from './components/Create'
+
 import About from './components/About'
 
 function App() {
@@ -13,8 +16,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/indice" element={<Indice />} />
-        <Route path="/busqueda" element={<Busqueda />} />
+        <Route path="/BusquedaFront" element={<BusquedaFront />} />
+        <Route path="/BusquedaBack/:words" element={<BusquedaBack />} />
+        <Route path="/BusquedaBack" element={<BusquedaBack />} />
         <Route path="/about" element={<About />} />
+        <Route path="/create" element={<Create />} />        
       </Routes>
 
     </>
