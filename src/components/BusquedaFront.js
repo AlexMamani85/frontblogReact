@@ -3,10 +3,10 @@ import React from 'react';
 import styled from "@emotion/styled";
 import * as blogService from '../context/blogs-services';
 
-import Header from '../components/Header'
+import Header from './Header'
 
 
-export default function Busqueda() {
+export default function BusquedaFront() {
   const [blogs, setBlogs] = React.useState([])
   const [query, setQuery] = React.useState('')
   const [state, setstate] = React.useState({
@@ -23,7 +23,7 @@ export default function Busqueda() {
   },[])
 
   const handleChange = (e) => {
-    setQuery(e.target.value)
+    setQuery(e.target.value);
     const results = blogs.filter(blog => {
       if (e.target.value === "") return blogs
       return blog.title.toLowerCase().includes(e.target.value.toLowerCase())
@@ -45,7 +45,7 @@ export default function Busqueda() {
                     <Label htmlFor="fname">Busqueda Por Título:</Label>
                   </TableDataForLabelInput>
                   <TableDataForInput>
-                    <Input placeholder="Type the query param" name="fname" type="search" value={query} onChange={handleChange}/>
+                    <Input placeholder="Type the query param" name="fname" type="search" value={query} onChange={(e)=>handleChange(e)}/>
                   </TableDataForInput>
                 </TableRow>
               </TableInput>
@@ -144,7 +144,7 @@ const TableRowTitle = styled.tr`
 `;
 
 const TableRow = styled.tr`
-&:nth-child(even) {
+&:nth-of-type(even) {
   background-color: lightblue;
 }
 `;
