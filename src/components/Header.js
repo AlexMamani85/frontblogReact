@@ -11,8 +11,18 @@ export default function Header() {
     </Link>
   </ListItem>
   <ListItem>
-    <Link to="/busqueda">
-        <TextSinDecoration>Busqueda</TextSinDecoration>
+    <Link to="/create">
+        <TextSinDecoration>Create</TextSinDecoration>
+    </Link>
+  </ListItem>
+  <ListItem>
+    <Link to="/busquedaFront">
+        <TextSinDecoration>Busqueda Por Frontend</TextSinDecoration>
+    </Link>
+  </ListItem>
+  <ListItem>
+    <Link to="/busquedaBack">
+        <TextSinDecoration>Busqueda Por Backend</TextSinDecoration>
     </Link>
   </ListItem>
   <ListItem>
@@ -44,6 +54,7 @@ const ListItem = styled.li`
 float: left;
 display: block;
 border-right: 1px solid #bbb;
+text-shadow: 5px 5px 7px red;
 `
 
 
