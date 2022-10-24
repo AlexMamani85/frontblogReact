@@ -20,21 +20,31 @@ export default function Indice() {
       <>
         <Header></Header>
         <Table>
-          <TableRowTitle>
-            <TableHeader>Título</TableHeader>
-            <TableHeader>Contenido</TableHeader>
-          </TableRowTitle>
-          {blogs.map(x=>
-          (
-            <TableRow>
-              <TableData>{x.title}</TableData>
-              <TableData>{x.body}</TableData>
-            </TableRow>
-            ))}
+          <TableHead>
+            <TableRowTitle>
+              <TableHeader>Título</TableHeader>
+              <TableHeader>Contenido</TableHeader>
+            </TableRowTitle>
+          </TableHead>
+          <TableBody>
+            {blogs.map(x=>
+            ( 
+              <TableRow key={x.id}>
+                <TableData>{x.title}</TableData>
+                <TableData>{x.body}</TableData>
+              </TableRow>
+              ))}
+          </TableBody>
         </Table>
       </>
   )
 }
+
+const TableHead = styled.thead`
+`;
+
+const TableBody = styled.tbody`
+`;
 
 const Table = styled.table`
   padding: 32px;
@@ -51,7 +61,7 @@ const TableRowTitle = styled.tr`
 `;
 
 const TableRow = styled.tr`
-&:nth-child(even) {
+&:nth-of-type(even) {
   background-color: lightblue;
 }
 `;
@@ -64,4 +74,3 @@ const TableData= styled.td`
 border: 1px solid lightgray;
 padding: 16px;
 `
-
